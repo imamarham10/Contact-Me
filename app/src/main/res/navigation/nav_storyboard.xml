@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_storyboard"
+    app:startDestination="@id/fragment_main">
+
+    <fragment
+        android:id="@+id/fragment_main"
+        android:name="com.example.androidnavigator.fragment_main"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_fragment_main_to_contact_fragment"
+            app:destination="@id/contact_fragment" />
+        <action
+            android:id="@+id/action_fragment_main_to_about_fragment"
+            app:destination="@id/about_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contact_fragment"
+        android:name="com.example.androidnavigator.Contact_fragment"
+        android:label="fragment_contact_fragment"
+        tools:layout="@layout/fragment_contact_fragment" >
+        <action
+            android:id="@+id/action_contact_fragment_to_message2"
+            app:destination="@id/message2" />
+    </fragment>
+    <fragment
+        android:id="@+id/about_fragment"
+        android:name="com.example.androidnavigator.About_fragment"
+        android:label="fragment_about_fragment"
+        tools:layout="@layout/fragment_about_fragment" />
+    <fragment
+        android:id="@+id/message2"
+        android:name="com.example.androidnavigator.Message"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" />
+</navigation>
